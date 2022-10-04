@@ -27,7 +27,7 @@
     "predeploy": "yarn",
     "prestart": "yarn",
     "semantic-release": "semantic-release --prepare false --publish @semantic-release/github --verify-conditions @semantic-release/github",
-    "start": "mastarm build --env dev --serve --proxy http://localhost:4000/api",
+    "start": "mastarm build --env dev --serve --proxy https://api.gtfs.staging.mobilidade.rio/api",
     "test": "npm run lint && npm run lint-messages && yarn run flow && npm run test-client",
     "test-client": "TZ=America/Los_Angeles mastarm test -e test -c configurations/test --test-path-ignore-patterns \"__tests__/end-to-end __tests__/test-utils\"",
     "test-end-to-end": "mastarm test --run-in-band --test-path-ignore-patterns \"lib __tests__/test-utils\" --test-environment ./__tests__/test-utils/e2e-environment.js --jest-cli-args=\"--json --outputFile e2e-test-results/results.json\""
